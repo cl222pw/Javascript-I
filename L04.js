@@ -140,8 +140,7 @@ function test9(number) {
 // För att kolla om en textsträng innehåller ett speciellt tecken kan funktionen indexOf användas 
 //(se länktips i handledningen)
 
-function test10(epost, namn) {
-	
+function test10(epost, namn){
 	
 }
 
@@ -154,8 +153,11 @@ function test10(epost, namn) {
 // ut det mittersta indexet i arrayen
 //(se länktips i handledningen)
 function test11(arr) {
-	
-	
+
+	//mitten värdet är index två så därför subtraherar jag ett från arrayens längd. sen delar den på två.
+	var middle = arr[Math.round((arr.length - 1) / 2)];
+	//returnerar middle variabeln som borde vara mittenvärdet
+    return middle;
 }
 
 
@@ -167,7 +169,11 @@ function test11(arr) {
 // Medelvärdet är summan av alla tal i arrayen delat med antalet tal i arrayen
 // Använd en for-loop för att lösa problemet
 function test12(arr) {
-	
+	//sum är den totala summan av alla tal, ant är antalet tal
+	for (var ant=0,sum=0;ant<arr.length;ant++) {
+    sum += arr[ant];
+  }
+  return sum / ant;
 	
 }
 
@@ -194,7 +200,7 @@ function test12(arr) {
 
 /**
 Kod för testning. Koden här under får du INTE röra!!
-****************************************************
+****************************************************c
 */
 
 var counter = 0;
