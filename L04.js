@@ -141,6 +141,22 @@ function test9(number) {
 //(se länktips i handledningen)
 
 function test10(epost, namn){
+
+	// Beroende på hur man gjort returneras någon av dessa tre
+	var tom = "Du har glömt att ange namn eller e-post"
+	var fel = "Ange en e-postadress"
+	var sent = "Ditt meddelande skickas"
+
+	// Kollar om epost eller namn är tom, är den det returneras tom
+	if(epost == "" || namn == "") {
+		return tom;
+	}
+	// Kollar om epost innehåller @, gör den inte det returneras fel
+    if(epost.indexOf("@") == -1){
+        return fel;
+	}
+	// Om inga av dom tidigare felmeddelandena returneras returneras sent
+	return sent;
 	
 }
 
